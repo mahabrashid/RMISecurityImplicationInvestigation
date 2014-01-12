@@ -8,7 +8,7 @@ public class HelloClient {
 	  public static void main (String[] argv) {
 	    try {
 	      HelloInterface hello = 
-	        (HelloInterface) Naming.lookup ("//ortles.ccs.neu.edu/Hello");
+	        (HelloInterface) Naming.lookup ("Hello");
 	      System.out.println (hello.say());
 	    } catch (Exception e) {
 	      System.out.println ("HelloClient exception: " + e);
