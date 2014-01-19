@@ -2,8 +2,6 @@ package rmiServer;
 
 import java.rmi.Naming;
 
-import rmiFunc.Hello;
-
 public class HelloServer {
 
 	/**
@@ -12,10 +10,11 @@ public class HelloServer {
 	   */
 	  public static void main (String[] argv) {
 	    try {
-	      Naming.rebind ("Hello", new Hello ("Hello, world!"));
+	      Naming.rebind ("Hello", new rmiFunc.Hello ("Hello, world!"));
 	      System.out.println ("Hello Server is ready.");
 	    } catch (Exception e) {
 	      System.out.println ("Hello Server failed: " + e);
+	      System.exit(-1);
 	    }
 	  }
 }

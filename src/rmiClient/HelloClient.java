@@ -1,5 +1,9 @@
 package rmiClient;
 
+import java.rmi.Naming;
+
+import rmiFunc.*;
+
 public class HelloClient {
 	/**
 	   * Client program for the "Hello, world!" example.
