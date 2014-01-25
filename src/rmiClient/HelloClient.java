@@ -1,8 +1,7 @@
 package rmiClient;
 
 import java.rmi.Naming;
-
-import rmiFunc.*;
+import rmiFunc.HelloInterface;
 
 public class HelloClient {
 	/**
