@@ -11,7 +11,7 @@ public class HelloClient {
 	  public static void main (String[] argv) {
 	    try {
 	      HelloInterface hello = 
-	        (HelloInterface) Naming.lookup ("Hello");
+	        (HelloInterface) Naming.lookup ("//127.0.0.1:1099/Hello");
 	      System.out.println (hello.say());
 	    } catch (Exception e) {
 	      System.out.println ("HelloClient exception: " + e);
