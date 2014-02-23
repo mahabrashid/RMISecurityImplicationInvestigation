@@ -6,7 +6,13 @@ import java.rmi.server.UnicastRemoteObject;
 /**
  * Remote Class for the "Hello, world!" example.
  */
-public class Hello extends UnicastRemoteObject implements HelloInterface {
+
+//public class Hello extends UnicastRemoteObject implements HelloInterface {
+//above will throw: java.rmi.server.ExportException: object already exported
+//at statement: UnicastRemoteObject.exportObject(remote, 0)
+//as you do not need to export it. UnicastRemoteObject constructor exports automatically. 
+
+public class Hello implements HelloInterface {
   private String message;
   
   /**
